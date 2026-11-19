@@ -1,6 +1,13 @@
-def test_employee_details():
-    result = employee_details("Rahul", "EMP01", "IT", "50000")
+from employee import employee_info
 
-    expected = "Name:Rahul\n Employee id:EMP01\nDepartment:IT\nSalary:50000"
+def test_employee_details():
+    result = employee_info("Rahul", "EMP01", "IT", "50000")
+
+    expected = (
+        "Employee Name: Rahul\n"
+        "Employee ID: EMP01\n"
+        "Department: IT\n"
+        "Salary: 50000"
+    )
 
     assert result == expected
